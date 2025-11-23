@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://onlineqaranpakacademy.com/sitemap.xml

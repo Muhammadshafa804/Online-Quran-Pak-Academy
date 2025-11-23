@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Sent Successfully</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(rgba(12, 74, 96, 0.1), rgba(29, 107, 122, 0.1));
+        }
+        .success-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .success-icon {
+            font-size: 60px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #1d6b7a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #155a67;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">✅</div>
+        <h2>Message Sent Successfully!</h2>
+        <p>Thank you for your message, <strong id="userName"></strong>!</p>
+        <p>We have received your inquiry for <strong id="userCourse"></strong> course.</p>
+        <p>We will contact you within 2 hours at <strong id="userEmail"></strong>.</p>
+        <a href="contact.html" class="btn">Back to Contact Page</a>
+        <a href="index.html" class="btn">Go to Homepage</a>
+    </div>
+
+    <script>
+        // URL parameters se data leke show karein (optional)
+        const urlParams = new URLSearchParams(window.location.search);
+        if(urlParams.get('name')) {
+            document.getElementById('userName').textContent = urlParams.get('name');
+            document.getElementById('userCourse').textContent = urlParams.get('course');
+            document.getElementById('userEmail').textContent = urlParams.get('email');
+        }
+    </script>
+</body>
+</html>
