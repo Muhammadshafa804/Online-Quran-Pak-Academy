@@ -4789,6 +4789,11 @@ img {
 .faq-answer p {
     color: #333;          
 }
+.faq-item,
+.faq-item h3,
+.faq-item p {
+    color: #222 !important; 
+}
 /* ===== RELATED HELP SECTIONS ===== */
 .related-sections {
     padding: 80px 0;
